@@ -1,0 +1,163 @@
+/* google font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800&family=VT323&display=swap');
+
+/* layout */
+:root {
+  // --primary: #4ab7ff;
+  --primary: rgb(255, 136, 0);
+  --error: #e7195a;
+}
+
+body {
+  background: rgb(45, 45, 75);
+  margin: 0;
+  font-family: "Poppins";
+}
+
+header {
+  background: rgb(10, 10, 53);
+}
+
+header .container {
+  max-width: 1920px;
+  margin: 0 auto;       
+  padding: 10px 30px;   
+  display: flex;        
+  align-items: center;  
+  justify-content: space-between;
+}
+
+header a {
+  color: var(--primary);
+  text-decoration: none; 
+  letter-spacing: 0.1em;
+  margin: 0 auto;
+}
+
+.pages {
+  max-width: 1920px;
+  padding: 30px;
+  margin: 0 auto;
+}
+
+.create {
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 0 20px;
+  position: relative;
+}
+
+.create-title {
+  text-align: center;
+  color: var(--primary);
+  letter-spacing: 0.07em;
+  margin-bottom: 20px;
+  font-size: 1.3em;
+}
+
+label, input {
+  display: block;
+  font-family: "Poppins";
+  font-size: 0.9em;
+  color: aliceblue;
+}
+
+input {
+  padding: 7px;
+  margin-top: 2px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-sizing: border-box;
+  color: black;
+}
+
+form button {
+  background: var(--primary);
+  border: 0;
+  color: rgb(0, 0, 0);
+  padding: 7px;
+  font-family: "Poppins";
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.center-button {
+  text-align: center;
+}
+
+div.error {
+  padding: 7px;
+  background: #ffefef;
+  border: 1px solid var(--error);
+  color: var(--error);
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+input.error {
+  border: 1px solid var(--error);
+}
+
+.home {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /*  to define the number of columns in the grid layout. fr stands for fraction */
+  gap: 50px; 
+}
+
+.todo-details h4 {
+  text-transform: uppercase;
+  margin: 0 0 10px 0;
+  font-size: 1.3em;
+  letter-spacing: 0.07em;
+  color: var(--primary);
+}
+
+.todo-details p {
+  margin: 0;
+  font-size: 1em;
+  color: #555;
+}
+
+.custom-control-input {
+  display: none;
+}
+
+.todo-details {
+  position: relative;
+}
+
+.todo-details span {
+  position:absolute;
+  bottom: 15px;
+  right: 20px;
+  cursor: pointer;
+  background: rgb(201, 207, 213);
+  padding: 5px;
+  border-radius: 50%;
+  color:#333;
+}
+
+.custom-control-label {
+  background: aliceblue;
+  border-radius: 20px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+.custom-control-input:checked ~ .custom-control-label {
+  background: rgb(105, 105, 137);
+  color: #fff;
+
+  h4 {
+    color: #444;
+    text-decoration: line-through;
+  }
+
+  p {
+    color: #444;
+    text-decoration: line-through;
+  }
+}
