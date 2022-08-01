@@ -10,7 +10,7 @@ const Home = () => {
   useEffect( () => {
     // fetch all the todos 
     const fetchTodos = async () => { 
-      const response = await fetch('/api/todoList')
+      const response = await fetch('https://todoapp-tracker.herokuapp.com/api/todoList')
       const json = await response.json() // array of todos
   
       if (response.ok) {

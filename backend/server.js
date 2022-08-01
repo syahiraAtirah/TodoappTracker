@@ -1,10 +1,15 @@
 require('dotenv').config()
 
 const express = require('express')
+const cors = require('cors')
+
 const mongoose = require('mongoose')
 const todoListRoutes = require('./routes/todoList')
 
 const app = express()
+
+// cors
+app.use(cors({ origin: 'https://todoapp-tracker.netlify.app' }))
 
 // Middleware - to have access on the req.body
 app.use(express.json())

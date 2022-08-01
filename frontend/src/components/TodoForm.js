@@ -18,7 +18,7 @@ const TodoForm = () => {
 
         const todo = { title, note, duedate }
 
-        const response = await fetch('/api/todoList', {
+        const response = await fetch('https://todoapp-tracker.herokuapp.com/api/todoList', {
             method: 'POST',
             body: JSON.stringify(todo),
             headers: {

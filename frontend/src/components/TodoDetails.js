@@ -11,7 +11,7 @@ const TodoDetails = ({todo}) => {
 
     const complete = { done: !done }
 
-    const response = await fetch('/api/todoList/' + todo._id, {
+    const response = await fetch('https://todoapp-tracker.herokuapp.com/api/todoList/' + todo._id, {
       method: 'PATCH',
       body: JSON.stringify(complete),
       headers: {
@@ -28,7 +28,7 @@ const TodoDetails = ({todo}) => {
 
   const handleClick = async () => {
 
-    const response = await fetch('/api/todoList/' + todo._id, {
+    const response = await fetch('https://todoapp-tracker.herokuapp.com/api/todoList/' + todo._id, {
       method: 'DELETE'
     })
     const json = await response.json()
